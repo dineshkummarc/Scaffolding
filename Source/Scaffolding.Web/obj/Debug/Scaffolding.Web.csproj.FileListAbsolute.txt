@@ -1,0 +1,7 @@
+C:\Root\Downloads\SubSonic MVC Template\Scaffolding\Source\Scaffolding.Web\bin\$safeprojectname$.dll
+C:\Root\Downloads\SubSonic MVC Template\Scaffolding\Source\Scaffolding.Web\bin\$safeprojectname$.pdb
+C:\Root\Downloads\SubSonic MVC Template\Scaffolding\Source\Scaffolding.Web\bin\DotNetOpenAuth.dll
+C:\Root\Downloads\SubSonic MVC Template\Scaffolding\Source\Scaffolding.Web\bin\SubSonic.Core.dll
+C:\Root\Downloads\SubSonic MVC Template\Scaffolding\Source\Scaffolding.Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Root\Downloads\SubSonic MVC Template\Scaffolding\Source\Scaffolding.Web\obj\Debug\$safeprojectname$.dll
+C:\Root\Downloads\SubSonic MVC Template\Scaffolding\Source\Scaffolding.Web\obj\Debug\$safeprojectname$.pdb

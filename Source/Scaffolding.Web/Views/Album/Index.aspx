@@ -1,0 +1,147 @@
+<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<PagedList<SubSonic.Web.Models.Album>>" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
+	Index
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
+    <h2>Index</h2>
+
+<form action="<%=Url.Action("index") %>" method="post">
+    <input type="text" size="40" id="search" name="q" /><input type="submit" value="go" />
+</form>
+    <table>
+        <tr>
+            <th></th>
+            <th>
+                <a href="<%=Url.CreateSortLink("Index","AlbumId") %>"> AlbumId</a>
+            </th>
+            <th>
+                <a href="<%=Url.CreateSortLink("Index","Title") %>"> Title</a>
+            </th>
+            <th>
+                <a href="<%=Url.CreateSortLink("Index","ArtistId") %>"> ArtistId</a>
+            </th>
+            <th>
+                ArtistName 
+            </th>
+        </tr>
+
+    <% foreach (var item in Model) { %>
+    
+        <tr>
+            <td style="width:70px">
+                <span style="padding:8px">
+                    <a href="<%=Url.Action("Details", new { id = item.KeyValue() })%>"><img src="/content/images/magnifier.png" border="0"/></a>
+                </span>
+                <span style="padding:8px">
+                    <a href="<%=Url.Action("Edit",  new {  id=item.KeyValue()  })%>"><img src="/content/images/pencil_go.png" border="0"/></a>  
+                </span>          
+            </td>
+            <td>
+                <%= Html.Encode(item.AlbumId) %>
+            </td>
+            <td>
+                <%= Html.Encode(item.Title) %>
+            </td>
+            <td>
+                <%= Html.Encode(item.ArtistId) %>
+            </td>
+            <td>
+                <%= Html.Encode(item.Artists.FirstOrDefault().Name) %>
+            </td>
+        </tr>
+    
+    <% } %>
+
+        <tr>
+            <td colspan="5" class="pager">
+                <%
+                int currentPage = Model.PageIndex;
+                int totalPages=Model.TotalPages;
+                %>
+                <form action="<%=Url.Action("index") %>" method="post" id="pagerForm">
+                    
+                    <input type="hidden" id="pg" name="pg" value="<%=currentPage %>" />
+                    <%if (currentPage == 1) { %>
+                    <img src="/content/images/control_start.png" style="cursor:hand" />
+                    <img src="/content/images/control_rewind.png" style="cursor:hand"/>
+                    <%} else { %>
+                    <img src="/content/images/control_start_blue.png" style="cursor:hand" id="start" />
+                    <img src="/content/images/control_rewind_blue.png" style="cursor:hand" id="rewind" />
+                    <%} %>
+                    
+                    <select id="ddpager" name="ddpager">
+                        <%for (int i = 1; i <= totalPages; i++) { %>
+                            <option <%if(currentPage==i){ %>selected="true"<%}%> value="<%=i%>"><%=i%></option>
+                        <%} %>
+                    </select>
+
+                    <%if (currentPage == totalPages) { %>
+                    <img src="/content/images/control_fastforward.png" style="cursor:hand" />
+                    <img src="/content/images/control_end.png" style="cursor:hand" />
+                    <%} else { %>
+                    <img src="/content/images/control_fastforward_blue.png" class="cursor" id="fastforward" />
+                    <img src="/content/images/control_end_blue.png" class="cursor" id="end"  />
+                    <%} %>
+               </form>          
+            </td>
+        </tr>
+
+
+
+    </table>
+
+    <p>
+        <%= Html.ActionLink("Create New", "Create") %>
+    </p>
+
+
+    <script type="text/javascript" src="/scripts/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="/scripts/jquery.autocomplete.js"></script>
+    <link rel=Stylesheet href="/scripts/jquery.autocomplete.css" />
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#search').autocomplete("/Album/list/", {
+                minChars: 2
+            });
+
+
+            
+            $('#ddpager').change(function() {
+                $('#pg').val(this.options[this.selectedIndex].value);
+                submitPager();
+            });
+
+            $('#fastforward').click(function() {
+                $('#pg').val('<%=currentPage+1%>');
+                submitPager();
+            });
+            $('#end').click(function() {
+                $('#pg').val('<%=totalPages%>');
+                submitPager();
+            });
+            $('#rewind').click(function() {
+                $('#pg').val('<%=currentPage-1%>');
+                submitPager();
+            });
+            $('#start').click(function() {
+                $('#pg').val(1);
+                submitPager();
+            });
+ 
+
+        });
+
+        function submitPager() {
+            $('#pagerForm').submit();
+        }
+
+        
+    </script>
+    
+
+</asp:Content>
+
+

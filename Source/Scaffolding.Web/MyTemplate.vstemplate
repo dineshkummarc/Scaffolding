@@ -1,0 +1,155 @@
+<VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>SubSonic MVC Template</Name>
+    <Description>ASP.NET MVC: SubSonic Style</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>SubSonic MVC Template</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="SubSonic.Web.csproj" File="SubSonic.Web.csproj" ReplaceParameters="true">
+      <Folder Name="App_Data" TargetFolderName="App_Data">
+        <ProjectItem ReplaceParameters="false" TargetFileName="Chinook.mdf">Chinook.mdf</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Chinook_log.ldf">Chinook_log.ldf</ProjectItem>
+      </Folder>
+      <Folder Name="CodeTemplates" TargetFolderName="CodeTemplates">
+        <Folder Name="AddController" TargetFolderName="AddController">
+          <ProjectItem ReplaceParameters="false" TargetFileName="Controller.tt">Controller.tt</ProjectItem>
+        </Folder>
+        <Folder Name="AddView" TargetFolderName="AddView">
+          <ProjectItem ReplaceParameters="false" TargetFileName="Create.tt">Create.tt</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Details.tt">Details.tt</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Edit.tt">Edit.tt</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="Empty.tt">Empty.tt</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="List.tt">List.tt</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="Content" TargetFolderName="Content">
+        <Folder Name="images" TargetFolderName="images">
+          <ProjectItem ReplaceParameters="false" TargetFileName="control_end.png">control_end.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="control_end_blue.png">control_end_blue.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="control_fastforward.png">control_fastforward.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="control_fastforward_blue.png">control_fastforward_blue.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="control_rewind.png">control_rewind.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="control_rewind_blue.png">control_rewind_blue.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="control_start.png">control_start.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="control_start_blue.png">control_start_blue.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="magnifier.png">magnifier.png</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="pencil_go.png">pencil_go.png</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="openid.css">openid.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Site.css">Site.css</ProjectItem>
+      </Folder>
+      <Folder Name="Controllers" TargetFolderName="Controllers">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AccountController.cs">AccountController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="HomeController.cs">HomeController.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Default.aspx">Default.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Default.aspx.cs">Default.aspx.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax">Global.asax</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax.cs">Global.asax.cs</ProjectItem>
+      <Folder Name="Helpers" TargetFolderName="Helpers">
+        <ProjectItem ReplaceParameters="true" TargetFileName="HtmlExtensions.cs">HtmlExtensions.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="TableHelpers.cs">TableHelpers.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Infrastructure" TargetFolderName="Infrastructure">
+        <Folder Name="Dependencies" TargetFolderName="Dependencies">
+          <ProjectItem ReplaceParameters="false" TargetFileName="DotNetOpenAuth.dll">DotNetOpenAuth.dll</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="SubSonic.Core.dll">SubSonic.Core.dll</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="IRepository.cs">IRepository.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="SubSonicRepository.cs">SubSonicRepository.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Models" TargetFolderName="Models">
+        <ProjectItem ReplaceParameters="false" TargetFileName="_Settings.tt">_Settings.tt</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="_Settings.cs">_Settings.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="_SQLServer.tt">_SQLServer.tt</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="_SQLServer.cs">_SQLServer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Classes.tt">Classes.tt</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Classes.cs">Classes.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Context.tt">Context.tt</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Context.cs">Context.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Scripts" TargetFolderName="Scripts">
+        <Folder Name="images" TargetFolderName="images">
+          <ProjectItem ReplaceParameters="false" TargetFileName="aol.gif">aol.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="blogger.ico">blogger.ico</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="claimid.ico">claimid.ico</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="facebook.gif">facebook.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="flickr.ico">flickr.ico</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="google.gif">google.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="livejournal.ico">livejournal.ico</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="myopenid.ico">myopenid.ico</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="openid-inputicon.gif">openid-inputicon.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="openid.gif">openid.gif</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="technorati.ico">technorati.ico</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="verisign.ico">verisign.ico</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="vidoop.ico">vidoop.ico</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="wordpress.ico">wordpress.ico</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="yahoo.gif">yahoo.gif</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery-1.3.2-vsdoc.js">jquery-1.3.2-vsdoc.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery-1.3.2.js">jquery-1.3.2.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery-1.3.2.min-vsdoc.js">jquery-1.3.2.min-vsdoc.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery-1.3.2.min.js">jquery-1.3.2.min.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery-ui-1.7.1.min.js">jquery-ui-1.7.1.min.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery.autocomplete.css">jquery.autocomplete.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery.autocomplete.js">jquery.autocomplete.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery.form.js">jquery.form.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MicrosoftAjax.debug.js">MicrosoftAjax.debug.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MicrosoftAjax.js">MicrosoftAjax.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MicrosoftMvcAjax.debug.js">MicrosoftMvcAjax.debug.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MicrosoftMvcAjax.js">MicrosoftMvcAjax.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="openid-jquery.js">openid-jquery.js</ProjectItem>
+        <Folder Name="ui-lightness" TargetFolderName="ui-lightness">
+          <Folder Name="images" TargetFolderName="images">
+            <ProjectItem ReplaceParameters="false" TargetFileName="ui-bg_diagonals-thick_18_b81900_40x40.png">ui-bg_diagonals-thick_18_b81900_40x40.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="ui-bg_diagonals-thick_20_666666_40x40.png">ui-bg_diagonals-thick_20_666666_40x40.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="ui-bg_flat_10_000000_40x100.png">ui-bg_flat_10_000000_40x100.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="ui-bg_glass_100_f6f6f6_1x400.png">ui-bg_glass_100_f6f6f6_1x400.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="ui-bg_glass_100_fdf5ce_1x400.png">ui-bg_glass_100_fdf5ce_1x400.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="ui-bg_glass_65_ffffff_1x400.png">ui-bg_glass_65_ffffff_1x400.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="ui-bg_gloss-wave_35_f6a828_500x100.png">ui-bg_gloss-wave_35_f6a828_500x100.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="ui-bg_highlight-soft_100_eeeeee_1x100.png">ui-bg_highlight-soft_100_eeeeee_1x100.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="ui-bg_highlight-soft_75_ffe45c_1x100.png">ui-bg_highlight-soft_75_ffe45c_1x100.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="ui-icons_222222_256x240.png">ui-icons_222222_256x240.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="ui-icons_228ef1_256x240.png">ui-icons_228ef1_256x240.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="ui-icons_ef8c08_256x240.png">ui-icons_ef8c08_256x240.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="ui-icons_ffd27a_256x240.png">ui-icons_ffd27a_256x240.png</ProjectItem>
+            <ProjectItem ReplaceParameters="false" TargetFileName="ui-icons_ffffff_256x240.png">ui-icons_ffffff_256x240.png</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="jquery-ui-1.7.1.custom.css">jquery-ui-1.7.1.custom.css</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="Views" TargetFolderName="Views">
+        <Folder Name="Account" TargetFolderName="Account">
+          <ProjectItem ReplaceParameters="true" TargetFileName="ChangePassword.aspx">ChangePassword.aspx</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="ChangePasswordSuccess.aspx">ChangePasswordSuccess.aspx</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="LogOn.aspx">LogOn.aspx</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Register.aspx">Register.aspx</ProjectItem>
+        </Folder>
+        <Folder Name="Home" TargetFolderName="Home">
+          <ProjectItem ReplaceParameters="true" TargetFileName="About.aspx">About.aspx</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Index.aspx">Index.aspx</ProjectItem>
+        </Folder>
+        <Folder Name="Shared" TargetFolderName="Shared">
+          <ProjectItem ReplaceParameters="true" TargetFileName="Error.aspx">Error.aspx</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="LogOnUserControl.ascx">LogOnUserControl.ascx</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Site.Master">Site.Master</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

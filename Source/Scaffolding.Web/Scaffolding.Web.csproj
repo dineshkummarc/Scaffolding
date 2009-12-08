@@ -64,6 +64,7 @@
     <Compile Include="Controllers\AlbumController.cs" />
     <Compile Include="Controllers\ArtistController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PayPalController.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -161,6 +162,7 @@
     <Content Include="Views\Artist\Details.aspx" />
     <Content Include="Views\Artist\Edit.aspx" />
     <Content Include="Views\Artist\Index.aspx" />
+    <Content Include="Views\PayPal\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\jquery-1.3.2.js" />

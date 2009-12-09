@@ -7,7 +7,7 @@
     <table>
         <tr>
             <th>
-                table
+                the table to add to cart
             </th>
         </tr>
         <tr>
